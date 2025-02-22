@@ -83,7 +83,7 @@ Here’s an example of how to use the tool:
 3. Set the start page to `1` and the end page to `10`.
 4. Enter a prompt like:
    ```
-   Analyze the following text and extract key entities: {lexical_page}
+   Acheck uploaded prompt file <promot.txt>
    ```
 5. Click "إنشاء الإخراج" (Generate Output) to start processing.
 6. Save the results as an Excel file.
