@@ -133,7 +133,7 @@ def validate_and_fix_json(json_str):
     return None
 
 # Updated store_df function
-def store_df(response, model_name, api_key):
+def store_df(response, model_name, _key):
     logging.info("Starting store_df processing...")
     try:
         # Extract JSON portion and fix keys
@@ -167,7 +167,7 @@ def store_df(response, model_name, api_key):
         # Fallback: Call response_handling
         logging.warning("First attempt parsing failed, falling back via Gemini model...")
         # print(fixed_json_data)
-        try_valid_json = response_handling(response, model_name, api_key)
+        try_valid_json = response_handling(response, model_name, _key)
         # print(try_valid_json)
         # Validate fallback data
         logging.info("Validating fallback JSON...")
@@ -271,7 +271,7 @@ class LexicalTool(QWidget):
 
         self.file_path = None
         self.model_names = ['gemini-2.0-flash-exp', 'gemini-1.5-flash-latest', 'gemini-1.5-pro', 'gemini-exp-1206']
-        self.api_key = "AIzaSyDseZ2_rS5cS0xJILfdzo46q42MkHtDsXU"  # Add your API key here
+        self.api_key = ""  # Add your API key here
         self.worker = None  # Initialize worker to None
 
         # Layout
